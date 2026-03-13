@@ -85,14 +85,82 @@ def set_theme():
         st.markdown("""
         <style>
         .stApp{
-        background:linear-gradient(135deg,#0E1117,#151923);
-        color:#e6e6e6;
+        background:linear-gradient(135deg,#0E1117,#151923) !important;
+        color:#e6e6e6 !important;
         }
         .stChatMessage{
         background:#1F2430;
         border-radius:16px;
         padding:10px;
         border:1px solid #2e3440;
+        color:#e6e6e6 !important;
+        }
+        .stChatMessage, .stChatMessage * {
+        color:#e6e6e6 !important;
+        }
+        .stMarkdown, .stMarkdown p, .stMarkdown div{
+        color:#e6e6e6 !important;
+        }
+        pre, code {
+        background:#2d3748 !important;
+        color:#e6e6e6 !important;
+        border:1px solid #4a5568 !important;
+        }
+        pre {
+        padding:12px !important;
+        border-radius:8px !important;
+        }
+        code {
+        padding:2px 6px !important;
+        border-radius:4px !important;
+        }
+        pre code {
+        background:transparent !important;
+        border:none !important;
+        }
+        input, textarea {
+        background:#2d3748 !important;
+        color:#e6e6e6 !important;
+        border:1px solid #4a5568 !important;
+        }
+        input::placeholder, textarea::placeholder {
+        color:#a0aec0 !important;
+        }
+        button {
+        color:#e6e6e6 !important;
+        }
+        /* Chat input area footer */
+        .stChatInputContainer, [data-testid="stChatInputContainer"]{
+        background:#151923 !important;
+        }
+        .stChatInputContainer input, [data-testid="stChatInputContainer"] input {
+        background:#2d3748 !important;
+        color:#e6e6e6 !important;
+        border:1px solid #4a5568 !important;
+        }
+        /* Header/Hero section */
+        .stMarkdown > div > div {
+        background-color: inherit !important;
+        }
+        /* General container backgrounds */
+        [data-testid="stVerticalBlock"] > div {
+        background:transparent !important;
+        }
+        /* Input wrapper */
+        .stInputContainer {
+        background:transparent !important;
+        }
+        /* Sidebar */
+        [data-testid="stSidebar"] {
+        background:#151923 !important;
+        }
+        /* Bottom footer area */
+        .stBottom {
+        background:#151923 !important;
+        }
+        /* Chat container */
+        [data-testid="stChatAskMessage"] {
+        background:#2d3748 !important;
         }
         </style>
         """,unsafe_allow_html=True)
